@@ -3,16 +3,16 @@ var infowindow;
 
 function initialize() {
   var vancouver = new google.maps.LatLng(45.637498, -122.657375);
+var placetypes1 = ['liquor_store', 'lodging'];
 
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     center: vancouver,
     zoom: 15
   });
-
   var request = {
     location: vancouver,
-    radius: 500,
-    types: ['store']
+    radius: 5000,
+    types: placetypes1
   };
   infowindow = new google.maps.InfoWindow();
   var service = new google.maps.places.PlacesService(map);
